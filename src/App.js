@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from './components/SearchBar';
 import Gallery from './components/Gallery';
 import api from './API/Api';
+import Spinner from './components/Spinner';
 
 function App() {
   const [inputValue, setInputValue] = useState('');
@@ -46,7 +47,7 @@ function App() {
           hendlerSubmit={() => setSearchQuery(inputValue)}
           hendlerInput={(evt) => setInputValue(evt.target.value)}
         />
-        <Gallery cards={cards} resErr={resErr} />
+        {isLoading ? <Spinner /> : <Gallery cards={cards} resErr={resErr} />}
       </main>
     </div>
   );
