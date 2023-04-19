@@ -1,0 +1,29 @@
+.Card {
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.Card:hover {
+  opacity: 0.7;
+}
+
+.Card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: unset;
+}
+
+.Card-title {
+  font-weight: 700;
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.Card-subtitle {
+  color: #767676;
+  width: 70%;
+  margin-top: 5px;
+}

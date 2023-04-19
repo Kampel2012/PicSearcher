@@ -1,23 +1,53 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import SearchBar from './components/SearchBar';
+import Gallery from './components/Gallery';
+import api from './API/Api';
 
 function App() {
+  const [inputValue, setInputValue] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [cards, setCards] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [resErr, setResErr] = useState('');
+
+  useEffect(() => {
+    if (searchQuery) {
+      setIsLoading(true);
+      api
+        .search(searchQuery)
+        .then((data) => {
+          const results = data.results.map((item) => {
+            return {
+              id: item.id,
+              title: item.description,
+              alt: item.alt_description,
+              url: { thumb: item.urls.small, large: item.urls.regular },
+              author: item.user.name,
+              likes: item.likes,
+            };
+          });
+          if (results.length > 0) {
+            setCards(results);
+          } else {
+            setResErr('По запросу ничего не найдено!');
+          }
+        })
+        .catch((e) => console.warn(e))
+        .finally(() => setIsLoading(false));
+    }
+  }, [searchQuery]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header"></header>
+      <main>
+        <SearchBar
+          hendlerSubmit={() => setSearchQuery(inputValue)}
+          hendlerInput={(evt) => setInputValue(evt.target.value)}
+        />
+        <Gallery cards={cards} resErr={resErr} />
+      </main>
     </div>
   );
 }
