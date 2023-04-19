@@ -4,7 +4,7 @@
 }
 
 .Search-bar__input {
-  width: calc(100% - 127px);
+  width: calc(100% - 130px);
   min-height: 50px;
   margin: 0 15px 0 0;
   font-size: 22px;
