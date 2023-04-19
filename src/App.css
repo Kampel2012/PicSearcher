@@ -5,6 +5,15 @@
   margin: 0 auto;
 }
 
+.App-header {
+  font-size: 30px;
+}
+
+.App-header__title {
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
 @media screen and (max-width: 900px) {
   .App {
     padding: 0 50px;
@@ -12,6 +21,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .App-header__title {
+    text-align: center;
+  }
   .App {
     padding: 0 20px;
   }

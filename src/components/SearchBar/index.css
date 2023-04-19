@@ -1,13 +1,12 @@
 .Search-bar {
-  min-height: 160px;
-  min-width: 100px;
   background-color: rgb(255, 255, 255);
+  margin: 20px auto 40px auto;
 }
 
 .Search-bar__input {
   width: calc(100% - 127px);
   min-height: 50px;
-  margin: 50px 15px 10px 0;
+  margin: 0 15px 0 0;
   font-size: 22px;
   padding-left: 20px;
   padding-right: 10px;
@@ -34,11 +33,8 @@
 
 @media screen and (max-width: 600px) {
   .Search-bar__input {
-    margin: 15px auto;
+    margin: 5px auto 15px auto;
     width: 95%;
-  }
-  .Search-bar__container {
-    padding-top: 15px;
   }
   .Search-bar__button {
     padding: 12px 100px;

@@ -41,7 +41,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <header className="App-header">
+        <h1 className="App-header__title">PicSearch</h1>
+      </header>
       <main>
         <SearchBar
           hendlerSubmit={() => setSearchQuery(inputValue)}
