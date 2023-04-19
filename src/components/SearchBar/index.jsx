@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 
 const SearchBar = ({ hendlerSubmit, hendlerInput }) => {
+  const btnText = 'Search';
   return (
     <div className="Search-bar">
       <div className="Search-bar__container">
@@ -18,7 +19,7 @@ const SearchBar = ({ hendlerSubmit, hendlerInput }) => {
           className="Search-bar__button"
           type="button"
         >
-          Search
+          {btnText}
         </button>
       </div>
     </div>
