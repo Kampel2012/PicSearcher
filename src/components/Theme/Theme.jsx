@@ -5,8 +5,8 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 const Theme = ({ onSwitchTheme }) => {
   const theme = useContext(ThemeContext);
   const setOfThemes = {
-    light: '🌞',
-    dark: '🌒',
+    light: '☀️',
+    dark: '🌙',
   };
 
   function switchTheme() {

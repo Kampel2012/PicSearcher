@@ -40,7 +40,7 @@
   background-color: rgb(48, 35, 35);
   color: aliceblue;
   font-size: 22px;
-  border-radius: 5%;
+  border-radius: 5px;
 }
 
 .Search-bar__button_theme_dark {
@@ -64,7 +64,6 @@
   }
 
   .Search-bar__button {
-    background-color: rgb(48, 35, 35);
     max-width: 200px;
     flex-grow: 1;
   }
