@@ -41,6 +41,11 @@
   color: aliceblue;
   font-size: 22px;
   border-radius: 5px;
+  transition: all 1s;
+}
+
+.Search-bar__button:hover {
+  background: #837c7c;
 }
 
 .Search-bar__button_theme_dark {

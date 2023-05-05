@@ -2,6 +2,7 @@
   font-size: 14px;
   text-align: left;
   cursor: pointer;
+  transition: all 0.5s;
 }
 
 .Card:hover {
