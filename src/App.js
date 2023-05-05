@@ -21,8 +21,12 @@ function App() {
           <Header onSwitchTheme={switchTheme} />
           <BrowserRouter>
             <Routes>
-              <Route index path="/" element={<Main />} />
-              <Route index path="/photos/:id" element={<PhotoPage />} />
+              <Route index path="/PicSearcher/" element={<Main />} />
+              <Route
+                index
+                path="/PicSearcher/photos/:id"
+                element={<PhotoPage />}
+              />
               <Route path="*" element={<ErrorPage404 />} />
             </Routes>
           </BrowserRouter>

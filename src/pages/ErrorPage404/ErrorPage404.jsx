@@ -6,7 +6,7 @@ const ErrorPage404 = (props) => {
   return (
     <div className="Error">
       <p className="Error__container_link">
-        <Link to={'/'} className="Error__link">
+        <Link to={'/PicSearcher'} className="Error__link">
           {' '}
           ⬅ go home{' '}
         </Link>

@@ -4,7 +4,7 @@ import './index.css';
 function Card({ author, src, alt, id }) {
   return (
     <div className="Card">
-      <Link to={`/photos/${id}`}>
+      <Link to={`/PicSearcher/photos/${id}`}>
         <img className="Card-image" alt={alt} src={src} />
       </Link>
       <p className="Card-title">{alt}</p>

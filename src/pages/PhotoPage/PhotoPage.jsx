@@ -46,7 +46,7 @@ const PhotoPage = (props) => {
         <Spinner />
       ) : (
         <div className="PhotoPage">
-          <Link to={'/'} className="PhotoPage__link">
+          <Link to={'/PicSearcher'} className="PhotoPage__link">
             {' '}
             ⬅ go home{' '}
           </Link>
