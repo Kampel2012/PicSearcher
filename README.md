@@ -1,4 +1,4 @@
-# PicSearcher
+# PicSearcher 🐾
 
 ## Ссылка на проект: https://kampel2012.github.io/PicSearcher/
 
