@@ -11,11 +11,11 @@ const SearchBar = ({ handlerSubmit, handlerInput }) => {
         <input
           onChange={handlerInput}
           className={`Search-bar__input Search-bar__input_theme_${theme}`}
-          type="search"
+          type="text"
           name="search"
           id="search"
-          autoComplete="off"
           placeholder="🔍 For example: cats"
+          autoComplete="off"
         />
         <button
           className={`Search-bar__button Search-bar__button_theme_${theme}`}
