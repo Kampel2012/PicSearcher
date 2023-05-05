@@ -3,6 +3,11 @@
   margin: 20px auto 40px auto;
 }
 
+.Search-bar_theme_dark {
+  background: rgb(36, 35, 35);
+  color: rgb(209, 209, 198);
+}
+
 .Search-bar__input {
   width: calc(100% - 130px);
   min-height: 50px;
@@ -11,11 +16,22 @@
   padding-left: 20px;
   padding-right: 10px;
   color: rgb(3, 4, 10);
+  border-radius: 2px;
+}
+
+.Search-bar__input_theme_dark {
+  border: 2px solid rgb(238, 233, 224);
+  background: rgb(36, 35, 35);
+  color: rgb(209, 209, 198);
 }
 
 .Search-bar__input::placeholder {
   font-size: 20px;
   color: rgba(36, 34, 28, 0.438);
+}
+
+.Search-bar__input_theme_dark::placeholder {
+  color: rgb(209, 209, 198);
 }
 
 .Search-bar__button {
@@ -24,6 +40,12 @@
   color: aliceblue;
   font-size: 22px;
   border-radius: 5%;
+}
+
+.Search-bar__button_theme_dark {
+  background: rgb(92, 88, 88);
+  color: rgb(209, 209, 198);
+  border: 0;
 }
 
 .Search-bar__container {

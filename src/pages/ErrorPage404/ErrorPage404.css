@@ -1,0 +1,23 @@
+.Error {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+}
+
+.Error__title {
+  margin-top: 40px;
+  color: rgb(107, 5, 5);
+}
+
+.Error__container_link {
+  text-align: left;
+}
+
+.Error__link {
+  text-align: left;
+  padding: 10px 10px;
+  line-height: 0;
+  color: rgb(117, 42, 101);
+  text-decoration: none;
+}

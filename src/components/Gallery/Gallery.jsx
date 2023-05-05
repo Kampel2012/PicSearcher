@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../Card';
+import Card from '../Card/Card';
 import './index.css';
 
 const Gallery = ({ cards, resErr }) => {
@@ -13,10 +13,10 @@ const Gallery = ({ cards, resErr }) => {
           {cards.map((card, i) => (
             <Card
               key={card.id}
-              title={card.title}
               author={card.author}
               src={card.url.thumb}
               alt={card.alt}
+              id={card.id}
             />
           ))}{' '}
         </div>

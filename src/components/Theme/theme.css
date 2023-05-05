@@ -1,0 +1,31 @@
+.Theme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+}
+
+.Theme__button {
+  width: 40px;
+  height: 40px;
+  line-height: 0;
+  font-size: xx-large;
+  background-color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  margin: 25px 90px 0 0;
+}
+
+@media screen and (max-width: 900px) {
+  .Theme__button {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Theme__button {
+    margin-right: 20px;
+  }
+}

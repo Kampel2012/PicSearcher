@@ -1,57 +1,34 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar';
-import Gallery from './components/Gallery';
-import api from './API/Api';
-import Spinner from './components/Spinner';
+import Header from './components/Header/Header';
+import { ThemeContext } from './contexts/ThemeContext';
+import Main from './pages/Main.jsx';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ErrorPage404 from './pages/ErrorPage404/ErrorPage404';
+import PhotoPage from './pages/PhotoPage/PhotoPage';
 
 function App() {
-  const [inputValue, setInputValue] = useState('');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [cards, setCards] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [resErr, setResErr] = useState('');
+  const [theme, setTheme] = useState('light');
 
-  useEffect(() => {
-    if (searchQuery) {
-      setIsLoading(true);
-      api
-        .search(searchQuery)
-        .then((data) => {
-          const results = data.results.map((item) => {
-            return {
-              id: item.id,
-              title: item.description,
-              alt: item.alt_description,
-              url: { thumb: item.urls.small, large: item.urls.regular },
-              author: item.user.name,
-              likes: item.likes,
-            };
-          });
-          if (results.length > 0) {
-            setCards(results);
-          } else {
-            setResErr('По запросу ничего не найдено!');
-          }
-        })
-        .catch((e) => console.warn(e))
-        .finally(() => setIsLoading(false));
-    }
-  }, [searchQuery]);
+  function switchTheme(value) {
+    setTheme(value);
+  }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="App-header__title">PicSearch</h1>
-      </header>
-      <main>
-        <SearchBar
-          hendlerSubmit={() => setSearchQuery(inputValue)}
-          hendlerInput={(evt) => setInputValue(evt.target.value)}
-        />
-        {isLoading ? <Spinner /> : <Gallery cards={cards} resErr={resErr} />}
-      </main>
-    </div>
+    <ThemeContext.Provider value={theme}>
+      <div className={`App App_theme_${theme}`}>
+        <div className="App__container">
+          <Header onSwitchTheme={switchTheme} />
+          <BrowserRouter>
+            <Routes>
+              <Route index path="/" element={<Main />} />
+              <Route index path="/photos/:id" element={<PhotoPage />} />
+              <Route path="*" element={<ErrorPage404 />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

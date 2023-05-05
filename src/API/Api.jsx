@@ -6,15 +6,25 @@ class Api {
     this._apiKey = apiKey;
   }
 
-  search(query) {
-    return fetch(
+  async search(query) {
+    const res = await fetch(
       `${this._baseUrl}/search/photos?per_page=50&orientation=landscape&query=${query}`,
       {
         headers: {
           Authorization: `Client-ID ${this._apiKey}`,
         },
       }
-    ).then((res) => res.json());
+    );
+    return await res.json();
+  }
+
+  async getPhotoById(id) {
+    const res = await fetch(`${this._baseUrl}/photos/${id}`, {
+      headers: {
+        Authorization: `Client-ID ${this._apiKey}`,
+      },
+    });
+    return await res.json();
   }
 }
 
