@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 600px) {
   .App-header__title {
-    text-align: center;
+    padding-top: 10px;
   }
   .App__container {
     padding: 0 20px;

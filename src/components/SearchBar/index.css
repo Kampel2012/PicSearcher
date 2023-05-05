@@ -9,7 +9,7 @@
 }
 
 .Search-bar__input {
-  width: calc(100% - 130px);
+  width: calc(100% - 150px);
   min-height: 50px;
   margin: 0 15px 0 0;
   font-size: 22px;
@@ -52,15 +52,23 @@
 .Search-bar__container {
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 @media screen and (max-width: 600px) {
   .Search-bar__input {
-    margin: 5px auto 15px auto;
-    width: 95%;
+    margin: 5px 10px 15px 10px;
+    flex-grow: 1;
   }
+
   .Search-bar__button {
-    padding: 12px 100px;
     background-color: rgb(48, 35, 35);
+    max-width: 200px;
+    flex-grow: 1;
+  }
+  .Search-bar__container {
+    flex-wrap: wrap;
   }
 }
