@@ -1,0 +1,41 @@
+.PhotoPage {
+  overflow: hidden;
+}
+
+.PhotoPage__about {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.PhotoPage__title {
+  margin: 10px 0;
+}
+
+.About__Image,
+.About__Place,
+.About__Author {
+  margin: 5px 0px;
+}
+
+.About__Likes {
+  font-weight: 600;
+  margin: 0;
+  text-align: end;
+}
+
+.About__downloadLink {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+.PhotoPage__link {
+  font-size: 25px;
+  text-align: left;
+  color: rgb(117, 42, 101);
+  text-decoration: none;
+}
+
+.About__Image {
+  max-width: 100%;
+}
