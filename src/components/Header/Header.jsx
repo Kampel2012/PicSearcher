@@ -1,5 +1,6 @@
 import React from 'react';
 import Theme from '../Theme/Theme';
+import './Header.css';
 
 const Header = ({ onSwitchTheme }) => {
   return (

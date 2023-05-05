@@ -26,6 +26,7 @@
 
 @media screen and (max-width: 600px) {
   .Theme__button {
-    margin-right: 10px;
+    margin-right: 15px;
+    margin-top: 15px;
   }
 }

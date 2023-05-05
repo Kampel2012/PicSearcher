@@ -44,7 +44,7 @@
 }
 
 .Search-bar__button_theme_dark {
-  background: rgb(92, 88, 88);
+  background: rgba(92, 88, 88, 0.5);
   color: rgb(209, 209, 198);
   border: 0;
 }
